@@ -1,35 +1,69 @@
-html, body {
+/**/
+html {
     height: 100%;
+    font-family: Quicksand;
+    font-weight: bold;
   }
   
   body {
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #D9D9D9 80%);
     background-repeat: no-repeat;
     background-size: cover;
     margin : 0;
+    height: 85%; /*Allow background to cover whole webpage */
     font-size: 24px;
+    padding-top: 55px;
   }
+
+  nav {
+  background-color: rgba(242, 206, 27, 0.2);
+  position: absolute; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height: 50px;
+  border-radius: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
   
+/* h1 tag ref.: "VibeZ" */
   h1 {
+<<<<<<< HEAD
     text-align: left;
+=======
+    font-size: 1.5em;
+    margin-left: 8px;
+>>>>>>> 31b4bd29894ffccb2aa2380dfb258688c8d45159
     color: #422761;
-    margin-top: 0;
-    padding-top: 50px;
-    font-size: 80px;
+    font-weight: bold;
   } 
-  
+
+/* h2 tag ref.: "Connected to: {workspace} */
+  h2 {
+    font-size: .75em;
+    margin-right: 8px;
+    color: #422761;
+    font-weight: bold;
+  }
+
+  /* Styling for input buttons */
   input, select, button {
     font-size: 20px;
     background-color: #F2F2F2;
     color: #4d394b;
     border-radius: 10px;
     padding: 5px;
+    font-family: Quicksand;
+    font-weight: bold;
   }
 
+/* Styling for inner text of calender */
   #start, #end {
     font-size: 18px;
   }
 
+/* Styling of next to buttons */
   span {
     color: #010101;
   }
@@ -42,14 +76,22 @@ html, body {
    text-align: center;
   }
 
+  /* Styling for graph */
   .options {
     margin: 5px 0;
   }
 
+  /* Styling for graph */
   .graph {
     margin-top: 50px;
   }
 
+  /* Styling for graph */
   #graphType {
     padding: 5px 35px;
+  }
+
+    /* Styling for enter button */
+  #ent {
+    background-color: rgba(242, 206, 27, 0.2);
   }

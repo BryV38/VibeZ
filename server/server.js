@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 
-const slack = require('./routes/slack');
+const slackRouter = require('./routes/slackRouter');
 const app = express();
 const PORT = 3000;
 
@@ -14,10 +14,10 @@ const defaultError = {
   message: { err: 'An error occurred' }, 
 };
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.use('/slack', slack)
+app.use('/slack', slackRouter);
 
 app.get('/', (req, res) => {
   const index = path.resolve(__dirname, '../client/index.html');
