@@ -13,7 +13,7 @@ const Graph = (props) => {
       newTime = newTime.toISOString().slice(0,16);
       xAxis.push(newTime);
       yAxis.push(data[i].sentiment);
-      backgroundColor.push('rgba(24, 166, 137, 0.6)');
+      //backgroundColor.push('rgba(24, 166, 137, 0.6)');
     }
     graphData = {
       labels: xAxis,
@@ -21,7 +21,13 @@ const Graph = (props) => {
         {
           label: 'Sentiment Score',
           data: yAxis,
-          backgroundColor: backgroundColor
+         // backgroundColor: backgroundColor
+          options: {
+            scales: {
+              xAxes: [{ gridLines: { color: "#131c2b" } }],
+              yAxes: [{ gridLines: { color: "rgba(24, 166, 137, 0.6)" } }]
+            }
+          },
         }
       ]
     }

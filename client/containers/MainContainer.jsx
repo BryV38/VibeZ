@@ -58,11 +58,12 @@ class MainContainer extends Component {
   }
 
   componentDidMount() {
-    // 24 hours => 86,400,000 milliseconds
+    // 1 month => 2.629746 * Math.pow(10, 9) milliseconds
+    // 2 weeks => 1.2096 * Math.pow(10, 9) milliseconds
     // https://www.calculateme.com/time/hours/to-milliseconds/24
     let present = new Date(Date.now() - 25200000); //units = milli
     console.log(present);
-    let defaultTime = new Date(present - 86400000); //units = milli
+    let defaultTime = new Date(present - (1.2096 * Math.pow(10, 9))); //units = milli
 
     let isoPresent = present.toISOString();
     console.log(isoPresent)
@@ -93,6 +94,8 @@ class MainContainer extends Component {
     }
     return (
       <div className='main'>
+        <nav></nav>
+        <a href="https://slack.com/oauth/authorize?client_id=653541339828.770547895078&scope=channels:history,channels:read"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
         <div className='channelID'>
           <span>Channel: </span>
           <select onChange={e => {this.updateChannel(e)}}>
